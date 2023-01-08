@@ -4,12 +4,12 @@ const browser = new webdriver.Builder()
 .build(); 
 browser.get
 ('http://testshop.sedtest-school.ru/');
-browser.findElements(webdriver.By.css('[class^="card-body"]')).then(function (links) {
-if (links.length == 5) {
+browser.findElements(webdriver.By.css('[class^="card-body"]')).then(function (cards) {
+if (cards.length == 5) {
     console.log('PASSED')
 }
 else {
-    console.error(`Ожидается 5, найдено ${links.length}`)
+    console.error(`Ожидается 5, найдено ${cards.length}`)
 }
 browser.quit();
 });
