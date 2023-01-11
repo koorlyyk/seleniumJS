@@ -1,4 +1,5 @@
 const webdriver = require('selenium-webdriver');
+require('chromedriver');
 const browser = new webdriver.Builder()
 .withCapabilities({'browserName': 'chrome'})
 .build(); 
